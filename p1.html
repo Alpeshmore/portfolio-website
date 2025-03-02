@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Follower Robot Using ATmgea8</title>
+    <link rel="stylesheet" href="p1.css"> <!-- Link to your CSS -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <img src="lo.png"  alt="Alpesh" class="logo-pic">
+                <li><a href="protfilo.html">Home </a></li>
+                <li><a href="protfilo.html#about">About</a></li>
+                <li><a href="protfilo.html#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="navbar"></div>
+    </header>
+    <section>
+        <h1>Line Follower Robot Using ATmgea8</h1>
+        <img src="p1.jpeg" alt="Project Image" class="project-image">
+        <h2>Project Details</h2>
+        <h3>1. Components Required</h3>
+           <table>
+            <thead>
+                <th>Component</th>
+                <th>Quantity</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ATmega8 Microcontroller</td>
+                    <td>1</td>
+                    <td>Brain of the robot</td>
+                </tr>
+                <tr>
+                    <td>IR Sensors (Pair)</td>
+                    <td>2 or more</td>
+                    <td>Detects the line (black/white)</td>
+                </tr>
+                <tr>
+                    <td>Motor Driver (L293D)</td>
+                    <td>1</td>
+                    <td>Controls motor speed & direction</td>
+                </tr>
+                <tr>
+                    <td>DC Motors</td>
+                    <td>2</td>
+                    <td>Drives the robot</td>
+                </tr>
+                <tr>
+                    <td>Chassis</td>
+                    <td>1</td>
+                    <td>Structure of the robot</td>
+                </tr>
+                <tr>
+                    <td>Battery (9V/12V)</td>
+                    <td>1</td>
+                    <td>Power supply</td>
+                </tr>
+                <tr>
+                    <td>Connecting Wires</td>
+                    <td>-</td>
+                    <td>For circuit connections</td>
+                </tr>
+            </tbody>
+           </table>
+         <h3> 2. Working Principle</h3>
+            IR Sensors detect the black or white line.<br>
+            ATmega8 processes sensor input and decides motor movements.<br>
+            Motor Driver (L293D) controls the direction of DC motors based on ATmega8 output.<br>
+            The robot moves forward, left, or right to stay on the line.<br>
+          <h3>3. Circuit Diagram</h3>
+            The main connections include:
+            
+         <li> IR Sensors → ATmega8 (Input)</li>  
+         <li> ATmega8 → L293D Motor Driver (Output)</li> 
+         <li> L293D → DC Motors (Motor Control)</li> 
+         <li> Power Supply for both ATmega8 and motors</li> 
+            Would you like a circuit diagram image for better understanding?
+         <h3>   5.Working Mechanism</h3>
+            Robot moves forward when both sensors detect the line.<br>
+            Robot turns left if the left sensor moves off the line.<br>
+            Robot turns right if the right sensor moves off the line.<br>
+            Robot stops when no line is detected.<br>
+           <h3> 6. Applications</h3>
+            ✅ Automated guided vehicles (AGVs) in industries.<br>
+            ✅ Warehouse robots for logistics and material handling.<br>
+            ✅ Maze-solving robots in robotics competitions.<br>
+            ✅ Traffic-following vehicles for smart cities.<br>
+            
+            
+            
+    </section>
+        
+        <section>
+            <h2>Source Code</h2>
+            <p>You can find the source code for this project on  <a href="p1.txt">Txt file</a> </p>
+<br> 
+        <a href="index.html">Back to Projects</a> <!-- Link back to the main portfolio page -->
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="contact-icons">
+            <a href="email.txt" target="_blank">
+                <img src="email.png" alt="Email" class="contact-icon">
+            </a>
+            <a href="https://www.linkedin.com/in/alpesh-more-435902292/" target="_blank">
+                <img src="link.png" alt="LinkedIn" class="contact-icon">
+            </a>
+            <a href="https://github.com/Alpeshmore" target="_blank">
+                <img src="git.png" alt="GitHub" class="contact-icon">
+            </a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Alpesh More. All rights reserved.</p>
+    </footer>
+</body>
+</html>

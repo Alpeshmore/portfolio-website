@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNIST Digit Recognition with Neural Network and Webcam</title>
+    <link rel="stylesheet" href="p2.css"> <!-- Link to your CSS -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <img src="lo.png"  alt="Alpesh" class="logo-pic">
+                <li><a href="protfilo.html">Home </a></li>
+                <li><a href="protfilo.html#about">About</a></li>
+                <li><a href="protfilo.html#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <div id="navbar"></div>
+    <section>
+        <h1>MNIST Digit Recognition with Neural Network and Webcam</h1>
+        
+       <br> <h2>    1. Introduction</h2>
+
+       This project involves building a deep learning model using TensorFlow and Keras to recognize handwritten digits from the MNIST dataset. Additionally, the model is integrated with a webcam for real-time digit recognition.
+       
+       <h2>  2. Technologies Used</h2>
+       
+        Programming Language: Python<br> 
+       Libraries & Frameworks:
+       
+        <li>TensorFlow/Keras (for deep learning)</li> 
+       
+        <li>OpenCV (for real-time image capture and preprocessing)</li> 
+       
+        <li> NumPy (for numerical operations)</li> 
+       
+        <li>Scikit-learn (for dataset manipulation)</li> 
+       
+       <h2>   3. Project Steps</h2>
+       
+       <h3>  Step 1: Load the MNIST Dataset</h3>
+       
+       <li>The MNIST dataset, consisting of 28x28 grayscale images of handwritten digits (0-9), is loaded using tf.keras.datasets.mnist.load_data().</li>
+       
+       <h3>  Step 2: Data Preprocessing</h3>
+       
+       <li> Normalize pixel values to the range [0,1].</li>
+       
+        <li>  Reshape the dataset to fit the neural network input format.</li>
+       
+            <li> One-hot encode the target labels for categorical classification.</li>
+       
+       <h3> Step 3: Model Architecture</h3>
+       
+       A simple feedforward neural network is used with the following layers:
+       
+       <li>  Flatten Layer: Converts the 28x28 images into a 1D vector.</li>
+       
+        <li>  Dense Layer (128 Neurons, ReLU Activation): Learns hidden patterns.</li>
+       
+        <li>  Dense Output Layer (10 Neurons, Softmax Activation): Outputs probabilities for each digit (0-9).</li>
+       
+       <h3> Step 4: Model Compilation and Training</h3>
+       
+       <li> The model is compiled with Adam optimizer and categorical crossentropy loss function.</li>
+       
+        <li>  It is trained for 10 epochs with a batch size of 32.</li>
+       
+       <h3>  Step 5: Model Evaluation</h3>
+       
+        <li>  The trained model is evaluated on the test dataset to determine its accuracy.</li>
+       
+        <li>  The accuracy is printed for analysis.</li>
+       
+       <h3> Step 6: Real-Time Testing with Webcam</h3>
+       
+       <li>  OpenCV captures real-time video from the webcam.</li>
+       
+        <li>  The user can press 'c' to capture an image.</li>
+       
+        <li> The image is preprocessed (converted to grayscale, resized, normalized) and fed into the trained model.</li>
+       
+        <li> The model predicts the digit and displays the result.</li>
+       
+        <li>  The user can exit the application by pressing 'q'.</li>
+       
+       <h2>   4. Expected Outcomes</h2>
+       
+       <li> The model should achieve high accuracy on the MNIST test dataset.</li>
+       
+        <li>The real-time digit recognition should accurately classify handwritten digits captured via webcam.</li>
+       
+       <h2> 5. Future Enhancements</h2>
+       
+       <li>  Implementing Convolutional Neural Networks (CNNs) for improved accuracy.</li>
+       
+        <li> Adding GUI for better user experience.</li>
+       
+        <li>  Extending recognition to handwritten words and symbols.</li>
+       
+       <h2> 6. Conclusion</h2>
+       
+       This project demonstrates the power of deep learning for digit recognition, combining a simple neural network with real-time image processing for practical applications.
+       
+       <p>You can find the source code for this project on <a href="p3.txt" target="_blank">Txt file</a>.</p>
+    <a href="index.html">Back to Projects</a> <!-- Link back to the main portfolio page -->
+</section>
+
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="contact-icons">
+            <a href="email.txt" target="_blank">
+                <img src="email.png" alt="Email" class="contact-icon">
+            </a>
+            <a href="https://www.linkedin.com/in/alpesh-more-435902292/" target="_blank">
+                <img src="link.png" alt="LinkedIn" class="contact-icon">
+            </a>
+            <a href="https://github.com/Alpeshmore" target="_blank">
+                <img src="git.png" alt="GitHub" class="contact-icon">
+            </a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Alpesh More. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Boom Barrier Using Arduino</title>
+    <link rel="stylesheet" href="p2.css"> <!-- Link to your CSS -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <img src="lo.png"  alt="Alpesh" class="logo-pic">
+                <li><a href="protfilo.html">Home </a></li>
+                <li><a href="protfilo.html#about">About</a></li>
+                <li><a href="protfilo.html#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <div id="navbar"></div>
+    <section>
+        <h1>Automatic Boom Barrier Using Arduino</h1>
+        <img src="p2.png" alt="Project Image" class="project-image">
+       <br> An Automatic Boom Barrier is a motorized gate system that controls vehicle access at entry and exit points, commonly used in parking lots, toll booths, and security checkpoints. It operates using an Arduino microcontroller along with various sensors and actuators.
+
+        <h2>Working Principle:</h2>
+        <li>Sensors (IR/Ultrasonic/RFID): Detect an approaching vehicle or authorized entry.</li>
+        <li>   Arduino Microcontroller: Processes input signals from sensors and controls the motorized boom barrier.</li>
+        <li>   Servo Motor/DC Motor: Mechanically lifts and lowers the boom arm.</li>
+        <li>  Power Supply: Provides energy to the Arduino, motor, and sensors.</li>
+        <li>   Optional Features: Can integrate RFID for authorized access, GSM for remote control, or IoT for smart monitoring.</li>
+        <h2>  Operation:</h2>
+        <li>    Vehicle Detection: A sensor (IR or Ultrasonic) detects an approaching vehicle.</li>
+            <li>    Authorization (Optional): If RFID or keypad authentication is used, only registered vehicles can pass.</li>
+            <li>    Boom Arm Opens: The Arduino triggers the motor to lift the barrier.</li>
+            <li>    Wait Period: The boom remains open for a set time or until the vehicle passes.</li>
+            <li>    Boom Arm Closes: Once the vehicle crosses an exit sensor, the barrier closes automatically.</li>
+            <li>    This project enhances security, reduces human intervention, and improves traffic management efficiency. Would you like a circuit diagram or Arduino code for implementation? 🚦🔧</li>
+            
+        
+        <h2>Source Code</h2>
+        <p>You can find the source code for this project on <a href="p2.txt" target="_blank">Txt file</a>.</p>
+        <a href="index.html">Back to Projects</a> <!-- Link back to the main portfolio page -->
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="contact-icons">
+            <a href="email.txt" target="_blank">
+                <img src="email.png" alt="Email" class="contact-icon">
+            </a>
+            <a href="https://www.linkedin.com/in/alpesh-more-435902292/" target="_blank">
+                <img src="link.png" alt="LinkedIn" class="contact-icon">
+            </a>
+            <a href="https://github.com/Alpeshmore" target="_blank">
+                <img src="git.png" alt="GitHub" class="contact-icon">
+            </a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Alpesh More. All rights reserved.</p>
+    </footer>
+</body>
+</html>

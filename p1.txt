@@ -1,0 +1,51 @@
+#include <avr/io.h>
+#include <util/delay.h>
+
+#define LEFT_SENSOR  (PINC & (1<<PC0)) // IR Left Sensor
+#define RIGHT_SENSOR (PINC & (1<<PC1)) // IR Right Sensor
+
+void motor_forward() {
+    PORTD |= (1<<PD0);  // Left Motor Forward
+    PORTD &= ~(1<<PD1);  
+    PORTD |= (1<<PD2);  // Right Motor Forward
+    PORTD &= ~(1<<PD3);
+}
+
+void motor_left() {
+    PORTD &= ~(1<<PD0);
+    PORTD |= (1<<PD1);  // Left Motor Reverse
+    PORTD |= (1<<PD2);
+    PORTD &= ~(1<<PD3); // Right Motor Forward
+}
+
+void motor_right() {
+    PORTD |= (1<<PD0);
+    PORTD &= ~(1<<PD1); // Left Motor Forward
+    PORTD &= ~(1<<PD2);
+    PORTD |= (1<<PD3);  // Right Motor Reverse
+}
+
+void motor_stop() {
+    PORTD &= ~((1<<PD0) | (1<<PD1) | (1<<PD2) | (1<<PD3)); // Stop Motors
+}
+
+int main() {
+    DDRC = 0x00;  // Set PORTC (Sensors) as Input
+    DDRD = 0xFF;  // Set PORTD (Motors) as Output
+    
+    while(1) {
+        if (!LEFT_SENSOR && !RIGHT_SENSOR) { // Both sensors on line
+            motor_forward();
+        }
+        else if (LEFT_SENSOR && !RIGHT_SENSOR) { // Left sensor off the line
+            motor_left();
+        }
+        else if (!LEFT_SENSOR && RIGHT_SENSOR) { // Right sensor off the line
+            motor_right();
+        }
+        else { // No line detected
+            motor_stop();
+        }
+        _delay_ms(100);
+    }
+}
